@@ -1,0 +1,22 @@
+{
+  "name": "Qiita Stock now",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Qiitaでストックボタンを押したらTweetできる",
+  "content_scripts": [
+    {
+      "matches": ["http://qiita.com/*/items/*"],
+      "js": [
+        "jquery.min.js",
+        "main.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "background": {
+    "scripts": [ "background.js" ]
+  },
+  "permissions": [
+    "tabs"
+  ]
+}
